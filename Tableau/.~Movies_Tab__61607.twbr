@@ -1,0 +1,3760 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1010.1014                               -->
+<workbook original-version='18.1' source-build='2024.3.0 (20243.24.1010.1014)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Top N' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='5'>
+        <calculation class='tableau' formula='5' />
+        <range max='25' min='1' />
+      </column>
+    </datasource>
+    <datasource caption='movies_tableau_V3' inline='true' name='federated.03suze61pv6l6s19rhkcn0dnsme3' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='movies_tableau_V3' name='textscan.1tw52251n28py819i2zdv1e1gozc'>
+            <connection class='textscan' directory='/Users/parkerharalds/Documents/Lighthouse/Popular-Movie-Analysis/Data' filename='movies_tableau_V3.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1tw52251n28py819i2zdv1e1gozc' name='movies_tableau_V3.csv' table='[movies_tableau_V3#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+            <column datatype='date' name='date' ordinal='0' />
+            <column datatype='string' name='Movie' ordinal='1' />
+            <column datatype='real' name='budget' ordinal='2' />
+            <column datatype='real' name='domestic_revenue' ordinal='3' />
+            <column datatype='real' name='world_revenue' ordinal='4' />
+            <column datatype='date' date-parse-format='yyyy' name='year' ordinal='5' />
+            <column datatype='string' name='originalTitle' ordinal='6' />
+            <column datatype='integer' name='isAdult' ordinal='7' />
+            <column datatype='integer' name='startYear' ordinal='8' />
+            <column datatype='string' name='runtimeMinutes' ordinal='9' />
+            <column datatype='string' name='genres' ordinal='10' />
+            <column datatype='real' name='averageRating' ordinal='11' />
+            <column datatype='integer' name='numVotes' ordinal='12' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[movies_tableau_V3.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_CA&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[movies_tableau_V3.csv]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[movies_tableau_V3.csv_53A466A1384C4B95914C42206CEF2D9A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Movie</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Movie]</local-name>
+            <parent-name>[movies_tableau_V3.csv]</parent-name>
+            <remote-alias>Movie</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[movies_tableau_V3.csv_53A466A1384C4B95914C42206CEF2D9A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>budget</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[budget]</local-name>
+            <parent-name>[movies_tableau_V3.csv]</parent-name>
+            <remote-alias>budget</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[movies_tableau_V3.csv_53A466A1384C4B95914C42206CEF2D9A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>domestic_revenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[domestic_revenue]</local-name>
+            <parent-name>[movies_tableau_V3.csv]</parent-name>
+            <remote-alias>domestic_revenue</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[movies_tableau_V3.csv_53A466A1384C4B95914C42206CEF2D9A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>world_revenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[world_revenue]</local-name>
+            <parent-name>[movies_tableau_V3.csv]</parent-name>
+            <remote-alias>world_revenue</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[movies_tableau_V3.csv_53A466A1384C4B95914C42206CEF2D9A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year]</local-name>
+            <parent-name>[movies_tableau_V3.csv]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[movies_tableau_V3.csv_53A466A1384C4B95914C42206CEF2D9A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>originalTitle</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[originalTitle]</local-name>
+            <parent-name>[movies_tableau_V3.csv]</parent-name>
+            <remote-alias>originalTitle</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[movies_tableau_V3.csv_53A466A1384C4B95914C42206CEF2D9A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>isAdult</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[isAdult]</local-name>
+            <parent-name>[movies_tableau_V3.csv]</parent-name>
+            <remote-alias>isAdult</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[movies_tableau_V3.csv_53A466A1384C4B95914C42206CEF2D9A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>startYear</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[startYear]</local-name>
+            <parent-name>[movies_tableau_V3.csv]</parent-name>
+            <remote-alias>startYear</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[movies_tableau_V3.csv_53A466A1384C4B95914C42206CEF2D9A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>runtimeMinutes</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[runtimeMinutes]</local-name>
+            <parent-name>[movies_tableau_V3.csv]</parent-name>
+            <remote-alias>runtimeMinutes</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[movies_tableau_V3.csv_53A466A1384C4B95914C42206CEF2D9A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>genres</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[genres]</local-name>
+            <parent-name>[movies_tableau_V3.csv]</parent-name>
+            <remote-alias>genres</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[movies_tableau_V3.csv_53A466A1384C4B95914C42206CEF2D9A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>averageRating</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[averageRating]</local-name>
+            <parent-name>[movies_tableau_V3.csv]</parent-name>
+            <remote-alias>averageRating</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[movies_tableau_V3.csv_53A466A1384C4B95914C42206CEF2D9A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>numVotes</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[numVotes]</local-name>
+            <parent-name>[movies_tableau_V3.csv]</parent-name>
+            <remote-alias>numVotes</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[movies_tableau_V3.csv_53A466A1384C4B95914C42206CEF2D9A]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='ROI' datatype='real' name='[Calculation_4181381157818388481]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='([world_revenue]/[budget])*100' />
+      </column>
+      <column caption='Rank' datatype='integer' name='[Calculation_4245627821266382848]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='RANK_UNIQUE(SUM([world_revenue]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column datatype='string' name='[Movie]' role='dimension' type='nominal' />
+      <column caption='movies_tableau_V3.csv' datatype='table' name='[__tableau_internal_object_id__].[movies_tableau_V3.csv_53A466A1384C4B95914C42206CEF2D9A]' role='measure' type='quantitative' />
+      <column caption='Average Rating' datatype='real' name='[averageRating]' role='measure' type='quantitative' />
+      <column caption='Budget' datatype='real' name='[budget]' role='measure' type='quantitative' />
+      <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+      <column caption='Domestic Revenue' datatype='real' name='[domestic_revenue]' role='measure' type='quantitative' />
+      <column caption='Genres' datatype='string' name='[genres]' role='dimension' type='nominal' />
+      <column caption='Is Adult' datatype='integer' name='[isAdult]' role='measure' type='quantitative' />
+      <column caption='Num Votes' datatype='integer' name='[numVotes]' role='measure' type='quantitative' />
+      <column caption='Original Title' datatype='string' name='[originalTitle]' role='dimension' type='nominal' />
+      <column caption='Runtime Minutes' datatype='string' name='[runtimeMinutes]' role='dimension' type='nominal' />
+      <column caption='Start Year' datatype='integer' name='[startYear]' role='dimension' type='quantitative' />
+      <column caption='World Revenue' datatype='real' name='[world_revenue]' role='measure' type='quantitative' />
+      <column caption='Year' datatype='date' datatype-customized='true' name='[year]' role='dimension' type='quantitative' />
+      <column-instance column='[Calculation_4181381157818388481]' derivation='None' name='[none:Calculation_4181381157818388481:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Movie]' derivation='None' name='[none:Movie:nk]' pivot='key' type='nominal' />
+      <column-instance column='[budget]' derivation='None' name='[none:budget:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[world_revenue]' derivation='None' name='[none:world_revenue:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[year]' derivation='None' name='[none:year:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[world_revenue]' derivation='Sum' name='[rank:sum:world_revenue:qk]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Columns' rank-options='Competition,Descending' type='Rank' />
+      </column-instance>
+      <column-instance column='[Calculation_4181381157818388481]' derivation='Sum' name='[sum:Calculation_4181381157818388481:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[averageRating]' derivation='Sum' name='[sum:averageRating:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[budget]' derivation='Sum' name='[sum:budget:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[domestic_revenue]' derivation='Sum' name='[sum:domestic_revenue:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[isAdult]' derivation='Sum' name='[sum:isAdult:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[numVotes]' derivation='Sum' name='[sum:numVotes:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[world_revenue]' derivation='Sum' name='[sum:world_revenue:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[year]' derivation='Year' name='[yr:year:ok]' pivot='key' type='ordinal' />
+      <group caption='Action (YEAR(Year))' hidden='true' name='[Action (YEAR(Year))]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[yr:year:ok]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Year)' hidden='true' name='[Action (Year)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:year:ok]' />
+        </groupfilter>
+      </group>
+      <group hidden='true' name='[Exclusions (Budget,Movie,ROI)]' name-style='unqualified' user:auto-column='exclude'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:budget:qk]' />
+          <groupfilter function='level-members' level='[none:Movie:nk]' />
+          <groupfilter function='level-members' level='[none:Calculation_4181381157818388481:qk]' />
+        </groupfilter>
+      </group>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='Data/tableau-temp 1/#TableauTemp_1ujlwh91gqykl21bw6ubz1vah7a2.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='11/01/2024 11:21:17 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table'>
+            <columns>
+              <column datatype='date' date-parse-format='yyyy' name='year' />
+            </columns>
+          </relation>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>date</remote-alias>
+              <ordinal>0</ordinal>
+              <family>movies_tableau_V3.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>2079</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[movies_tableau_V3.csv_53A466A1384C4B95914C42206CEF2D9A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Movie</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Movie]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Movie</remote-alias>
+              <ordinal>1</ordinal>
+              <family>movies_tableau_V3.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5519</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[movies_tableau_V3.csv_53A466A1384C4B95914C42206CEF2D9A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>budget</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[budget]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>budget</remote-alias>
+              <ordinal>2</ordinal>
+              <family>movies_tableau_V3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>372</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[movies_tableau_V3.csv_53A466A1384C4B95914C42206CEF2D9A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>domestic_revenue</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[domestic_revenue]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>domestic_revenue</remote-alias>
+              <ordinal>3</ordinal>
+              <family>movies_tableau_V3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4478</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[movies_tableau_V3.csv_53A466A1384C4B95914C42206CEF2D9A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>world_revenue</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[world_revenue]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>world_revenue</remote-alias>
+              <ordinal>4</ordinal>
+              <family>movies_tableau_V3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5303</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[movies_tableau_V3.csv_53A466A1384C4B95914C42206CEF2D9A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>year</remote-name>
+              <remote-type>7</remote-type>
+              <local-name>[year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>year</remote-alias>
+              <ordinal>5</ordinal>
+              <family>movies_tableau_V3.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[movies_tableau_V3.csv_53A466A1384C4B95914C42206CEF2D9A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>originalTitle</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[originalTitle]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>originalTitle</remote-alias>
+              <ordinal>6</ordinal>
+              <family>movies_tableau_V3.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5238</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[movies_tableau_V3.csv_53A466A1384C4B95914C42206CEF2D9A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>isAdult</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[isAdult]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>isAdult</remote-alias>
+              <ordinal>7</ordinal>
+              <family>movies_tableau_V3.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[movies_tableau_V3.csv_53A466A1384C4B95914C42206CEF2D9A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>startYear</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[startYear]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>startYear</remote-alias>
+              <ordinal>8</ordinal>
+              <family>movies_tableau_V3.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>72</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[movies_tableau_V3.csv_53A466A1384C4B95914C42206CEF2D9A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>runtimeMinutes</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[runtimeMinutes]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>runtimeMinutes</remote-alias>
+              <ordinal>9</ordinal>
+              <family>movies_tableau_V3.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>135</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[movies_tableau_V3.csv_53A466A1384C4B95914C42206CEF2D9A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>genres</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[genres]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>genres</remote-alias>
+              <ordinal>10</ordinal>
+              <family>movies_tableau_V3.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>351</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[movies_tableau_V3.csv_53A466A1384C4B95914C42206CEF2D9A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>averageRating</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[averageRating]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>averageRating</remote-alias>
+              <ordinal>11</ordinal>
+              <family>movies_tableau_V3.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>71</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[movies_tableau_V3.csv_53A466A1384C4B95914C42206CEF2D9A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>numVotes</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[numVotes]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>numVotes</remote-alias>
+              <ordinal>12</ordinal>
+              <family>movies_tableau_V3.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4499</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[movies_tableau_V3.csv_53A466A1384C4B95914C42206CEF2D9A]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.03suze61pv6l6s19rhkcn0dnsme3].[sum:domestic_revenue:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.03suze61pv6l6s19rhkcn0dnsme3].[sum:budget:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.03suze61pv6l6s19rhkcn0dnsme3].[rank:sum:world_revenue:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.03suze61pv6l6s19rhkcn0dnsme3].[sum:world_revenue:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.03suze61pv6l6s19rhkcn0dnsme3].[usr:Calculation1:qk]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[federated.03suze61pv6l6s19rhkcn0dnsme3].[sum:numVotes:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.03suze61pv6l6s19rhkcn0dnsme3].[sum:averageRating:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.03suze61pv6l6s19rhkcn0dnsme3].[sum:isAdult:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.03suze61pv6l6s19rhkcn0dnsme3].[none:world_revenue:qk]&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;[federated.03suze61pv6l6s19rhkcn0dnsme3].[sum:Calculation_4181381157818388481:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Movie:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Beasts of the Southern Wild&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Boys Don&apos;t Cry&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Chariots of Fire&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Das Leben der Anderen&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Dumb &amp; Dumber&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Exeter&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Garden State&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Hannah Montana and Miley Cyrus: Best of Both Wo…&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Kingdom of the Spiders&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;MA&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Mrs. Doubtfire&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Ong-Bak&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Saw&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Sinister&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;The Brothers McMullen&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;The Passion of the Christ&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;The Super Mario Bros. Movie&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;The Visit&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Tootsie&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Transamerica&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Bend it Like Beckham&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Beverly Hills Cop II&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Cabin Fever&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Don’t Breathe&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;East is East&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Entre les murs&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Gabriela&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Gran Torino&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Insidious&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;La La Land&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Live and Let Die&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Mad Max&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Midnight Cowboy&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;One Flew Over the Cuckoo\\&apos;s Nest&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Open Water&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Pieces of April&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Pulp Fiction&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Sex, Lies, and Videotape&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;The Sessions&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Waitress&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Waking Ned Devine&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Chernobyl Diaries&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Despicable Me 3&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Earthquake&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Forrest Gump&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Godzilla 2000&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Gone with the Wind&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Grave Encounters&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Hellraiser&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Hoop Dreams&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;It&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Jigsaw&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Minions&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Pokemon 3: The Movie&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Se7en&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Super Size Me&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;The Exorcist&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;The Fault in Our Stars&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;The Mighty&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;The Purge: Election Year&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;The Whale&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Winchester&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;3 Men and a Baby&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;A Haunted House&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;An Officer and a Gentleman&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Annabelle&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Bowling for Columbine&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Buried&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Clerks&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Crouching Tiger, Hidden Dragon&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Deadpool&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;His Only Son&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Insidious Chapter 2&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;M3GAN&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Maniac&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;My Big Fat Greek Wedding&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;On Her Majesty&apos;s Secret Service&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Sound of Freedom&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Toy Story&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Unfriended: Dark Web&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Us&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;You Only Live Twice&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;28 Days Later…&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Aliens&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;American Graffiti&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;American Pie&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Better Luck Tomorrow&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Billy Elliot&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Bronson&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;In the Bedroom&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Jaws&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Kids&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Monty Python and the Holy Grail&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Paranormal Activity 2&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Per un pugno di dollari&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Rain Man&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Schindler’s List&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Searching&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Silver Linings Playbook&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;The Kentucky Fried Movie&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;The Others&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;The Sting&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Bambi&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Black Swan&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Borat&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Bridget Jones&apos;s Diary&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Chasing Amy&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Glass&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Goldfinger&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Good Will Hunting&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Graduation Day&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Jurassic Park&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Mad Max 2: The Road Warrior&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Me Before You&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Over the Hill to the Poorhouse&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Scoop&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;The Big Sick&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;The Crying Game&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;The Howling&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;The Invisible Man&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;The Puffy Chair&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;The Sound of Music&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;The Twilight Saga: New Moon&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;2016: Obama’s America&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;A Star is Born&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Annabelle: Creation&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Bohemian Rhapsody&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Clean&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Dayereh&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Five Nights at Freddy’s&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;From Here to Eternity&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Ghost&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Host&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;In the Company of Men&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Mary Poppins&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Pretty Woman&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Roger &amp; Me&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Romeo+Juliet&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Terrifier 3&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;The First Purge&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;The Witch&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Tom Jones&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Unforgiven&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Bikur Ha-Tizmoret&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Blazing Saddles&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Facing the Giants&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Fahrenheit 9/11&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Grease&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Hello, My Name is Doris&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;High Noon&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Indiana Jones and the Temple of Doom&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;It Ends With Us&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Jaws 2&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;La vita è bella&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Le Fabuleux destin d\\&apos;Amélie Poulain&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Lion&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Meet the Blacks&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Paranormal Activity&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Raiders of the Lost Ark&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Saw II&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;The Conjuring&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;The Hangover&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Trainspotting&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Wolf Creek&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[Rec]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Billy Jack&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Crocodile Dundee 2&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Cure&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Friday the 13th Part IV: The Final Chapter&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Halloween II&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Hollywood Shuffle&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Insidious Chapter 3&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;It Follows&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Mad Hot Ballroom&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;On the Waterfront&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Ouija&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Porky&apos;s&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Shine a Light&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Taxi Driver&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;The Beast from 20,000 Fathoms&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;The Godfather&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;The Man with the Golden Gun&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;The Wandering Earth (流浪地球)&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;The Wretched&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;47 Meters Down&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Avatar&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Bad Teacher&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Dragon Ball Super: Broly&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;El Mariachi&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;El orfanato&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Happy Death Day&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Home Alone 2: Lost in New York&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Independence Day&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;La misma luna&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Lights Out&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Monsoon Wedding&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Paranormal Activity 3&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;The Green Inferno&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;The Quiet Ones&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;The Rocky Horror Picture Show&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;The Twilight Saga: Eclipse&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Twenty-Two&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Waiting...&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Wonder&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Demon Slayer: Kimetsu no Yaiba—The Movie: Mugen…&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Driving Miss Daisy&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Escape Room&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Four Weddings and a Funeral&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;From Russia With Love&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Joker&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Jumanji: Welcome to the Jungle&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Minions: The Rise of Gru&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Paranormal Activity 4&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Parasite (기생충)&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Saw III&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Skinamarink&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Star Wars Ep. V: The Empire Strikes Back&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Ted&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;The Best Exotic Marigold Hotel&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;The Full Monty&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;The Grace Card&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;The Maze Runner&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;The Original Kings of Comedy&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;X&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;A Ghost Story&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Airplane!&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Beverly Hills Cop&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Brokeback Mountain&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Cafarnaúm&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Cavite&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Dangal&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Eraserhead&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Insidious: The Last Key&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;La marche de l&apos;empereur&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Lage Raho Munna Bhai&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Les Visiteurs&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Slacker&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Snow White and the Seven Dwarfs&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Super Troopers&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;The Blue Lagoon&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;The Inbetweeners&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Three Billboards Outside Ebbing, Missouri&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Titanic&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Whiplash&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;American Beauty&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Another Earth&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Back to the Future&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Butch Cassidy and the Sundance Kid&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Cool Runnings&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Diamonds Are Forever&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Doctor Zhivago&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;El secreto de sus ojos&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Get Out&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Green Book&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Like Crazy&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Little Miss Sunshine&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Pi&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Primer&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Smile&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Split&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;The Boy Next Door&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;The Company You Keep&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;The French Connection&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Truth or Dare&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;4 luni, 3 saptamani si 2 zile&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Bonnie and Clyde&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Casablanca&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Close Encounters of the Third Kind&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Crocodile Dundee&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Cry Wolf&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Fireproof&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Gremlins&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Harry Potter and the Deathly Hallows: Part II&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Leaving Las Vegas&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Lovely and Amazing&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;M*A*S*H&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Napoleon Dynamite&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;National Lampoon’s Animal House&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;She Done Him Wrong&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Star Wars Ep. VI: Return of the Jedi&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;The Broadway Melody&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;The Lord of the Rings: The Return of the King&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;You&apos;re Next&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Young Frankenstein&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Alien&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Batman&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Boyhood&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Chronicle&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Flashdance&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Following&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;In the Heat of the Night&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Les Choristes&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Mamma Mia!&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Monster&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;My Date With Drew&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Saw IV&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Shakespeare in Love&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Swingers&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Tadpole&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;The Evil Dead&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;The Mask&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;The Nun&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;War Room&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Woodstock&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;A Quiet Place&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Bienvenue chez les Ch&apos;tis&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Blue Valentine&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Coming Home&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Courageous&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Dances with Wolves&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Dr. No&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;High School Musical 3: Senior Year&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;I Can Only Imagine&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Jet Li&apos;s Hero&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Kevin Hart: Let Me Explain&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Lost in Translation&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Monsters&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Pink Flamingos&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Rocky&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;She&apos;s Gotta Have It&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;The Big Parade&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;The Curse of La Llorona&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;The Secret Life of Pets&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Twins&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;All You Need is Love&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Amores Perros&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Barbarian&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Dead Poets Society&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Fantasia&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Good Bye, Lenin!&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Jodaeiye Nader az Simin&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Les Intouchables&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Lucy&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Paranormal Activity: The Marked Ones&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Platoon&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Saw V&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Sleight&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Spirited Away (千と千尋の神隠し)&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;That Thing You Do!&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;The Devil Inside&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;The Gallows&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;The Sixth Sense&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;The Spy Who Loved Me&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Tupac Resurrection&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Unfriended&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;An Inconvenient Truth&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Book Club&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Chicago&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Dallas Buyers Club&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Friday the 13th Part 3&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Home Alone&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Hostel&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Insidious: The Red Door&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Lock, Stock and Two Smoking Barrels&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Neighbors&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Shrek 2&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Slumdog Millionaire&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Star Wars Ep. IV: A New Hope&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;The Black Stallion&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;The Bridge on the River Kwai&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;The Last Exorcism&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;The Station Agent&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;The Stewardesses&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;The Wizard of Oz&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Top Gun&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Despicable Me 2&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;E.T. the Extra-Terrestrial&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Fifty Shades of Grey&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Friday the 13th Part 2&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Fruitvale Station&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;God’s Not Dead&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Jackass Presents: Bad Grandpa&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Jackass: The Movie&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Juno&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Kevin Hart: Laugh at My Pain&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Lola rennt&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Magic Mike&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Once&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Talk To Me&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;The Best Years of Our Lives&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;The Bodyguard&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;The Fighter&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;The Imitation Game&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;The King’s Speech&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;The Terminator&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;American Ninja 2: The Confrontation&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Call Me by Your Name&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Cube&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Fatal Attraction&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Five Feet Apart&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Monster&apos;s Ball&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Moonlight&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;No se Aceptan Devoluciones&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Police Academy&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Rosemary&apos;s Baby&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Scary Movie&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Sweet Sweetback&apos;s Baad Asssss Song&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Terrifier 2&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;The Blair Witch Project&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;The Purge&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;The Purge: Anarchy&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;The Shape of Water&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;The Silence of the Lambs&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;There&apos;s Something About Mary&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Thunderball&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Your Sister&apos;s Sister&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Canada&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='movies_tableau_V3.csv' id='movies_tableau_V3.csv_53A466A1384C4B95914C42206CEF2D9A'>
+            <properties context=''>
+              <relation connection='textscan.1tw52251n28py819i2zdv1e1gozc' name='movies_tableau_V3.csv' table='[movies_tableau_V3#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+                  <column datatype='date' name='date' ordinal='0' />
+                  <column datatype='string' name='Movie' ordinal='1' />
+                  <column datatype='real' name='budget' ordinal='2' />
+                  <column datatype='real' name='domestic_revenue' ordinal='3' />
+                  <column datatype='real' name='world_revenue' ordinal='4' />
+                  <column datatype='date' date-parse-format='yyyy' name='year' ordinal='5' />
+                  <column datatype='string' name='originalTitle' ordinal='6' />
+                  <column datatype='integer' name='isAdult' ordinal='7' />
+                  <column datatype='integer' name='startYear' ordinal='8' />
+                  <column datatype='string' name='runtimeMinutes' ordinal='9' />
+                  <column datatype='string' name='genres' ordinal='10' />
+                  <column datatype='real' name='averageRating' ordinal='11' />
+                  <column datatype='integer' name='numVotes' ordinal='12' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table'>
+                <columns>
+                  <column datatype='date' date-parse-format='yyyy' name='year' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='directors' inline='true' name='federated.0lkej7x1x2f75b14xu4hd157wca0' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='directors' name='textscan.02w1g701uj5q891641c6c10q08ix'>
+            <connection class='textscan' directory='/Users/parkerharalds/Documents/Lighthouse/Popular-Movie-Analysis/Data' filename='directors.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='movies_tableau_V3' name='textscan.0nt7ya305cuacr1eigb5w07tbrcy'>
+            <connection class='textscan' directory='/Users/parkerharalds/Documents/Lighthouse/Popular-Movie-Analysis/Data' filename='movies_tableau_V3.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.02w1g701uj5q891641c6c10q08ix' name='directors.csv' table='[directors#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+            <column datatype='date' name='date' ordinal='0' />
+            <column datatype='string' name='primaryTitle_x' ordinal='1' />
+            <column datatype='real' name='budget' ordinal='2' />
+            <column datatype='real' name='domestic_gross' ordinal='3' />
+            <column datatype='real' name='world_gross' ordinal='4' />
+            <column datatype='date' date-parse-format='yyyy' name='year' ordinal='5' />
+            <column datatype='string' name='originalTitle' ordinal='6' />
+            <column datatype='integer' name='isAdult' ordinal='7' />
+            <column datatype='integer' name='startYear' ordinal='8' />
+            <column datatype='integer' name='runtimeMinutes' ordinal='9' />
+            <column datatype='string' name='genres' ordinal='10' />
+            <column datatype='real' name='averageRating' ordinal='11' />
+            <column datatype='integer' name='numVotes' ordinal='12' />
+            <column datatype='string' name='primaryName' ordinal='13' />
+            <column datatype='string' name='birthYear' ordinal='14' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[directors.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_CA&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[directors.csv]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[directors.csv_B563CBF2E88B4B458624691CFE79016D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>primaryTitle_x</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[primaryTitle_x]</local-name>
+            <parent-name>[directors.csv]</parent-name>
+            <remote-alias>primaryTitle_x</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[directors.csv_B563CBF2E88B4B458624691CFE79016D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>budget</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[budget]</local-name>
+            <parent-name>[directors.csv]</parent-name>
+            <remote-alias>budget</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[directors.csv_B563CBF2E88B4B458624691CFE79016D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>domestic_gross</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[domestic_gross]</local-name>
+            <parent-name>[directors.csv]</parent-name>
+            <remote-alias>domestic_gross</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[directors.csv_B563CBF2E88B4B458624691CFE79016D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>world_gross</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[world_gross]</local-name>
+            <parent-name>[directors.csv]</parent-name>
+            <remote-alias>world_gross</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[directors.csv_B563CBF2E88B4B458624691CFE79016D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year]</local-name>
+            <parent-name>[directors.csv]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[directors.csv_B563CBF2E88B4B458624691CFE79016D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>originalTitle</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[originalTitle]</local-name>
+            <parent-name>[directors.csv]</parent-name>
+            <remote-alias>originalTitle</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[directors.csv_B563CBF2E88B4B458624691CFE79016D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>isAdult</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[isAdult]</local-name>
+            <parent-name>[directors.csv]</parent-name>
+            <remote-alias>isAdult</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[directors.csv_B563CBF2E88B4B458624691CFE79016D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>startYear</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[startYear]</local-name>
+            <parent-name>[directors.csv]</parent-name>
+            <remote-alias>startYear</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[directors.csv_B563CBF2E88B4B458624691CFE79016D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>runtimeMinutes</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[runtimeMinutes]</local-name>
+            <parent-name>[directors.csv]</parent-name>
+            <remote-alias>runtimeMinutes</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[directors.csv_B563CBF2E88B4B458624691CFE79016D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>genres</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[genres]</local-name>
+            <parent-name>[directors.csv]</parent-name>
+            <remote-alias>genres</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[directors.csv_B563CBF2E88B4B458624691CFE79016D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>averageRating</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[averageRating]</local-name>
+            <parent-name>[directors.csv]</parent-name>
+            <remote-alias>averageRating</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[directors.csv_B563CBF2E88B4B458624691CFE79016D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>numVotes</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[numVotes]</local-name>
+            <parent-name>[directors.csv]</parent-name>
+            <remote-alias>numVotes</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[directors.csv_B563CBF2E88B4B458624691CFE79016D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>primaryName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[primaryName]</local-name>
+            <parent-name>[directors.csv]</parent-name>
+            <remote-alias>primaryName</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[directors.csv_B563CBF2E88B4B458624691CFE79016D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>birthYear</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[birthYear]</local-name>
+            <parent-name>[directors.csv]</parent-name>
+            <remote-alias>birthYear</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[directors.csv_B563CBF2E88B4B458624691CFE79016D]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Rank' datatype='integer' name='[Calculation_4335207232844500993]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='RANK_UNIQUE(SUM([world_gross]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Money Maker' datatype='string' name='[Calculation_4335207232852750338]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [world_gross] &gt; [budget] THEN &apos;Made Money&apos;&#10;ELSEIF [world_gross] = [budget] THEN &apos;Broke Even&apos;&#10;ELSE &apos;Lost Money&apos;&#10;END' />
+      </column>
+      <column caption='ROI' datatype='real' name='[Calculation_4335207232853192707]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='([world_gross]/[budget]) * 100' />
+      </column>
+      <column caption='directors.csv' datatype='table' name='[__tableau_internal_object_id__].[directors.csv_B563CBF2E88B4B458624691CFE79016D]' role='measure' type='quantitative' />
+      <column caption='Average Rating' datatype='real' name='[averageRating]' role='measure' type='quantitative' />
+      <column caption='Birth Year' datatype='string' name='[birthYear]' role='dimension' type='nominal' />
+      <column caption='Budget' datatype='real' name='[budget]' role='measure' type='quantitative' />
+      <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+      <column caption='Domestic Gross' datatype='real' name='[domestic_gross]' role='measure' type='quantitative' />
+      <column caption='Genres' datatype='string' name='[genres]' role='dimension' type='nominal' />
+      <column caption='Is Adult' datatype='integer' name='[isAdult]' role='measure' type='quantitative' />
+      <column caption='Num Votes' datatype='integer' name='[numVotes]' role='measure' type='quantitative' />
+      <column caption='Original Title' datatype='string' name='[originalTitle]' role='dimension' type='nominal' />
+      <column caption='Name' datatype='string' name='[primaryName]' role='dimension' type='nominal' />
+      <column caption='Movie' datatype='string' name='[primaryTitle_x]' role='dimension' type='nominal' />
+      <column caption='Runtime Minutes' datatype='integer' name='[runtimeMinutes]' role='measure' type='quantitative' />
+      <column caption='Start Year' datatype='integer' hidden='true' name='[startYear]' role='dimension' type='quantitative' />
+      <column caption='World Gross' datatype='real' name='[world_gross]' role='measure' type='quantitative' />
+      <column caption='Release Year' datatype='date' datatype-customized='true' name='[year]' role='dimension' type='quantitative' />
+      <column-instance column='[Calculation_4335207232852750338]' derivation='None' name='[none:Calculation_4335207232852750338:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_4335207232853192707]' derivation='None' name='[none:Calculation_4335207232853192707:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[budget]' derivation='None' name='[none:budget:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[primaryName]' derivation='None' name='[none:primaryName:nk]' pivot='key' type='nominal' />
+      <column-instance column='[primaryTitle_x]' derivation='None' name='[none:primaryTitle_x:nk]' pivot='key' type='nominal' />
+      <column-instance column='[year]' derivation='Year-Trunc' name='[tyr:year:ok]' pivot='key' type='ordinal' />
+      <group caption='Action (Money Maker,ROI,Budget,Movie)' hidden='true' name='[Action (Money Maker,ROI,Budget,Movie)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Calculation_4335207232852750338]' />
+          <groupfilter function='level-members' level='[none:Calculation_4335207232853192707:ok]' />
+          <groupfilter function='level-members' level='[none:budget:ok]' />
+          <groupfilter function='level-members' level='[primaryTitle_x]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Name)' hidden='true' name='[Action (Name)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[primaryName]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Name,YEAR(Release Year))' hidden='true' name='[Action (Name,YEAR(Release Year))]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[primaryName]' />
+          <groupfilter function='level-members' level='[tyr:year:ok]' />
+        </groupfilter>
+      </group>
+      <group hidden='true' name='[Exclusions (Movie,Name)]' name-style='unqualified' user:auto-column='exclude'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:primaryTitle_x:nk]' />
+          <groupfilter function='level-members' level='[none:primaryName:nk]' />
+        </groupfilter>
+      </group>
+      <drill-paths>
+        <drill-path name='Director'>
+          <field>[primaryName]</field>
+          <field>[primaryTitle_x]</field>
+        </drill-path>
+      </drill-paths>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='Data/tableau-temp/#TableauTemp_18o7uqs0dt11cx12vd8v21i96coz.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='11/02/2024 12:08:33 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table'>
+            <columns>
+              <column datatype='date' date-parse-format='yyyy' name='year' />
+            </columns>
+          </relation>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>date</remote-alias>
+              <ordinal>0</ordinal>
+              <family>directors.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>2238</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[directors.csv_B563CBF2E88B4B458624691CFE79016D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>primaryTitle_x</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[primaryTitle_x]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>primaryTitle_x</remote-alias>
+              <ordinal>1</ordinal>
+              <family>directors.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3578</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[directors.csv_B563CBF2E88B4B458624691CFE79016D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>budget</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[budget]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>budget</remote-alias>
+              <ordinal>2</ordinal>
+              <family>directors.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>397</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[directors.csv_B563CBF2E88B4B458624691CFE79016D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>domestic_gross</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[domestic_gross]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>domestic_gross</remote-alias>
+              <ordinal>3</ordinal>
+              <family>directors.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3504</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[directors.csv_B563CBF2E88B4B458624691CFE79016D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>world_gross</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[world_gross]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>world_gross</remote-alias>
+              <ordinal>4</ordinal>
+              <family>directors.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3534</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[directors.csv_B563CBF2E88B4B458624691CFE79016D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>year</remote-name>
+              <remote-type>7</remote-type>
+              <local-name>[year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>year</remote-alias>
+              <ordinal>5</ordinal>
+              <family>directors.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <contains-null>true</contains-null>
+              <object-id>[directors.csv_B563CBF2E88B4B458624691CFE79016D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>originalTitle</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[originalTitle]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>originalTitle</remote-alias>
+              <ordinal>6</ordinal>
+              <family>directors.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3606</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[directors.csv_B563CBF2E88B4B458624691CFE79016D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>isAdult</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[isAdult]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>isAdult</remote-alias>
+              <ordinal>7</ordinal>
+              <family>directors.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[directors.csv_B563CBF2E88B4B458624691CFE79016D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>startYear</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[startYear]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>startYear</remote-alias>
+              <ordinal>8</ordinal>
+              <family>directors.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>98</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[directors.csv_B563CBF2E88B4B458624691CFE79016D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>runtimeMinutes</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[runtimeMinutes]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>runtimeMinutes</remote-alias>
+              <ordinal>9</ordinal>
+              <family>directors.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>163</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[directors.csv_B563CBF2E88B4B458624691CFE79016D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>genres</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[genres]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>genres</remote-alias>
+              <ordinal>10</ordinal>
+              <family>directors.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>330</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[directors.csv_B563CBF2E88B4B458624691CFE79016D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>averageRating</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[averageRating]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>averageRating</remote-alias>
+              <ordinal>11</ordinal>
+              <family>directors.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>72</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[directors.csv_B563CBF2E88B4B458624691CFE79016D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>numVotes</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[numVotes]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>numVotes</remote-alias>
+              <ordinal>12</ordinal>
+              <family>directors.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3430</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[directors.csv_B563CBF2E88B4B458624691CFE79016D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>primaryName</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[primaryName]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>primaryName</remote-alias>
+              <ordinal>13</ordinal>
+              <family>directors.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1920</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[directors.csv_B563CBF2E88B4B458624691CFE79016D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>birthYear</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[birthYear]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>birthYear</remote-alias>
+              <ordinal>14</ordinal>
+              <family>directors.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>103</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[directors.csv_B563CBF2E88B4B458624691CFE79016D]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:primaryName:nk]' palette='green_10_0' type='palette'>
+            <map to='#24693d'>
+              <bucket>&quot;Ridley Scott&quot;</bucket>
+            </map>
+            <map to='#24693d'>
+              <bucket>&quot;Steven Spielberg&quot;</bucket>
+            </map>
+            <map to='#378848'>
+              <bucket>&quot;James Cameron&quot;</bucket>
+            </map>
+            <map to='#5ea654'>
+              <bucket>&quot;Joe Russo&quot;</bucket>
+            </map>
+            <map to='#64ac5a'>
+              <bucket>&quot;Michael Bay&quot;</bucket>
+            </map>
+            <map to='#67af5c'>
+              <bucket>&quot;Sam Raimi&quot;</bucket>
+            </map>
+            <map to='#6eb663'>
+              <bucket>&quot;Jon Favreau&quot;</bucket>
+            </map>
+            <map to='#73ba67'>
+              <bucket>&quot;David Yates&quot;</bucket>
+            </map>
+            <map to='#75bc69'>
+              <bucket>&quot;Robert Zemeckis&quot;</bucket>
+            </map>
+            <map to='#7dc370'>
+              <bucket>&quot;Roland Emmerich&quot;</bucket>
+            </map>
+            <map to='#7fc572'>
+              <bucket>&quot;Anthony Russo&quot;</bucket>
+            </map>
+            <map to='#83c976'>
+              <bucket>&quot;Christopher Nolan&quot;</bucket>
+            </map>
+            <map to='#85ca77'>
+              <bucket>&quot;Jon Watts&quot;</bucket>
+            </map>
+            <map to='#8ed07f'>
+              <bucket>&quot;Chris Columbus&quot;</bucket>
+            </map>
+            <map to='#97d586'>
+              <bucket>&quot;Tim Burton&quot;</bucket>
+            </map>
+            <map to='#98d687'>
+              <bucket>&quot;Lee Unkrich&quot;</bucket>
+            </map>
+            <map to='#a5db96'>
+              <bucket>&quot;James Wan&quot;</bucket>
+            </map>
+            <map to='#b3e0a6'>
+              <bucket>&quot;Chris Renaud&quot;</bucket>
+            </map>
+            <map to='#b3e0a6'>
+              <bucket>&quot;J.J. Abrams&quot;</bucket>
+            </map>
+            <map to='#b3e0a6'>
+              <bucket>&quot;Peter Jackson&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_4335207232852750338:nk]' type='palette'>
+            <map to='#59a14f'>
+              <bucket>&quot;Made Money&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Lost Money&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Canada&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='directors.csv' id='directors.csv_B563CBF2E88B4B458624691CFE79016D'>
+            <properties context=''>
+              <relation connection='textscan.02w1g701uj5q891641c6c10q08ix' name='directors.csv' table='[directors#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+                  <column datatype='date' name='date' ordinal='0' />
+                  <column datatype='string' name='primaryTitle_x' ordinal='1' />
+                  <column datatype='real' name='budget' ordinal='2' />
+                  <column datatype='real' name='domestic_gross' ordinal='3' />
+                  <column datatype='real' name='world_gross' ordinal='4' />
+                  <column datatype='date' date-parse-format='yyyy' name='year' ordinal='5' />
+                  <column datatype='string' name='originalTitle' ordinal='6' />
+                  <column datatype='integer' name='isAdult' ordinal='7' />
+                  <column datatype='integer' name='startYear' ordinal='8' />
+                  <column datatype='integer' name='runtimeMinutes' ordinal='9' />
+                  <column datatype='string' name='genres' ordinal='10' />
+                  <column datatype='real' name='averageRating' ordinal='11' />
+                  <column datatype='integer' name='numVotes' ordinal='12' />
+                  <column datatype='string' name='primaryName' ordinal='13' />
+                  <column datatype='string' name='birthYear' ordinal='14' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table'>
+                <columns>
+                  <column datatype='date' date-parse-format='yyyy' name='year' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1_4342359091BC4DADBE67C6247429054B]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Movies Overview' type='sheet' worksheet='Revenue by Year' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Movies Overview' />
+      </command>
+    </action>
+    <action caption='Filter 2 (generated)' name='[Action2_702104D74ED74FFE828093E4EABD6E2B]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Directors Overview' type='sheet' worksheet='Director Revenue' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Directors Overview' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Budget and Revenue'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='movies_tableau_V3' name='federated.03suze61pv6l6s19rhkcn0dnsme3' />
+          </datasources>
+          <datasource-dependencies datasource='federated.03suze61pv6l6s19rhkcn0dnsme3'>
+            <column datatype='string' name='[Movie]' role='dimension' type='nominal' />
+            <column caption='Budget' datatype='real' name='[budget]' role='measure' type='quantitative' />
+            <column-instance column='[Movie]' derivation='None' name='[none:Movie:nk]' pivot='key' type='nominal' />
+            <column-instance column='[budget]' derivation='None' name='[none:budget:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[world_revenue]' derivation='None' name='[none:world_revenue:qk]' pivot='key' type='quantitative' />
+            <column caption='World Revenue' datatype='real' name='[world_revenue]' role='measure' type='quantitative' />
+            <column caption='Year' datatype='date' datatype-customized='true' name='[year]' role='dimension' type='quantitative' />
+            <column-instance column='[year]' derivation='Year' name='[yr:year:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.03suze61pv6l6s19rhkcn0dnsme3].[Action (YEAR(Year))]'>
+            <groupfilter function='level-members' level='[yr:year:ok]' user:ui-action-filter='[Action1_4342359091BC4DADBE67C6247429054B]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.03suze61pv6l6s19rhkcn0dnsme3].[Action (YEAR(Year))]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.03suze61pv6l6s19rhkcn0dnsme3].[none:world_revenue:qk]' scope='rows' value='' />
+            <format attr='title' class='0' field='[federated.03suze61pv6l6s19rhkcn0dnsme3].[none:budget:qk]' scope='cols' value='Budget' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.03suze61pv6l6s19rhkcn0dnsme3].[none:Movie:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-transparency' value='193' />
+                <format attr='shape' value=':filled/circle' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.03suze61pv6l6s19rhkcn0dnsme3].[none:world_revenue:qk]</rows>
+        <cols>[federated.03suze61pv6l6s19rhkcn0dnsme3].[none:budget:qk]</cols>
+      </table>
+      <simple-id uuid='{9617AD83-DB3F-4722-968A-67BC432EC27C}' />
+    </worksheet>
+    <worksheet name='Director Films'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='directors' name='federated.0lkej7x1x2f75b14xu4hd157wca0' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Top N' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='5'>
+              <calculation class='tableau' formula='5' />
+              <range max='25' min='1' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0lkej7x1x2f75b14xu4hd157wca0'>
+            <column-instance column='[primaryName]' derivation='None' name='[none:primaryName:nk]' pivot='key' type='nominal' />
+            <column-instance column='[primaryTitle_x]' derivation='None' name='[none:primaryTitle_x:nk]' pivot='key' type='nominal' />
+            <column caption='Name' datatype='string' name='[primaryName]' role='dimension' type='nominal' />
+            <column caption='Movie' datatype='string' name='[primaryTitle_x]' role='dimension' type='nominal' />
+            <column-instance column='[world_gross]' derivation='Sum' name='[sum:world_gross:qk]' pivot='key' type='quantitative' />
+            <column caption='World Gross' datatype='real' name='[world_gross]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0lkej7x1x2f75b14xu4hd157wca0].[Action (Name)]'>
+            <groupfilter function='level-members' level='[primaryName]' user:ui-action-filter='[Action2_702104D74ED74FFE828093E4EABD6E2B]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0lkej7x1x2f75b14xu4hd157wca0].[none:primaryName:nk]'>
+            <groupfilter count='[Parameters].[Parameter 1]' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([world_gross])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:primaryName:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.0lkej7x1x2f75b14xu4hd157wca0].[none:primaryName:nk]' direction='ASC' using='[federated.0lkej7x1x2f75b14xu4hd157wca0].[sum:world_gross:qk]' />
+          <slices>
+            <column>[federated.0lkej7x1x2f75b14xu4hd157wca0].[none:primaryName:nk]</column>
+            <column>[federated.0lkej7x1x2f75b14xu4hd157wca0].[Action (Name)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <size column='[federated.0lkej7x1x2f75b14xu4hd157wca0].[sum:world_gross:qk]' />
+              <text column='[federated.0lkej7x1x2f75b14xu4hd157wca0].[none:primaryName:nk]' />
+              <text column='[federated.0lkej7x1x2f75b14xu4hd157wca0].[none:primaryTitle_x:nk]' />
+              <color column='[federated.0lkej7x1x2f75b14xu4hd157wca0].[none:primaryName:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{FCEBEA3C-D27C-4BDF-9EB5-3D3BF4CFBF11}' />
+    </worksheet>
+    <worksheet name='Director ROI'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='directors' name='federated.0lkej7x1x2f75b14xu4hd157wca0' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Top N' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='5'>
+              <calculation class='tableau' formula='5' />
+              <range max='25' min='1' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0lkej7x1x2f75b14xu4hd157wca0'>
+            <column caption='Money Maker' datatype='string' name='[Calculation_4335207232852750338]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [world_gross] &gt; [budget] THEN &apos;Made Money&apos;&#10;ELSEIF [world_gross] = [budget] THEN &apos;Broke Even&apos;&#10;ELSE &apos;Lost Money&apos;&#10;END' />
+            </column>
+            <column caption='ROI' datatype='real' name='[Calculation_4335207232853192707]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='([world_gross]/[budget]) * 100' />
+            </column>
+            <column caption='Budget' datatype='real' name='[budget]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_4335207232852750338]' derivation='None' name='[none:Calculation_4335207232852750338:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_4335207232853192707]' derivation='None' name='[none:Calculation_4335207232853192707:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[budget]' derivation='None' name='[none:budget:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[primaryName]' derivation='None' name='[none:primaryName:nk]' pivot='key' type='nominal' />
+            <column-instance column='[primaryTitle_x]' derivation='None' name='[none:primaryTitle_x:nk]' pivot='key' type='nominal' />
+            <column caption='Name' datatype='string' name='[primaryName]' role='dimension' type='nominal' />
+            <column caption='Movie' datatype='string' name='[primaryTitle_x]' role='dimension' type='nominal' />
+            <column caption='World Gross' datatype='real' name='[world_gross]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <natural-sort column='[federated.0lkej7x1x2f75b14xu4hd157wca0].[none:Calculation_4335207232852750338:nk]' direction='DESC' />
+          <filter class='categorical' column='[federated.0lkej7x1x2f75b14xu4hd157wca0].[none:primaryName:nk]'>
+            <groupfilter count='[Parameters].[Parameter 1]' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([world_gross])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:primaryName:nk]' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-manual-selection-is-empty='true' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0lkej7x1x2f75b14xu4hd157wca0].[none:primaryName:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0lkej7x1x2f75b14xu4hd157wca0].[none:budget:qk]' scope='cols' value='' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0lkej7x1x2f75b14xu4hd157wca0].[none:Calculation_4335207232852750338:nk]' />
+              <text column='[federated.0lkej7x1x2f75b14xu4hd157wca0].[none:primaryTitle_x:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-family' value='Toppan Bunkyu Midashi Mincho' />
+                <format attr='font-size' value='8' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#59a14f' />
+                <format attr='shape' value=':filled/circle' />
+                <format attr='mark-transparency' value='167' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0lkej7x1x2f75b14xu4hd157wca0].[none:Calculation_4335207232853192707:qk]</rows>
+        <cols>[federated.0lkej7x1x2f75b14xu4hd157wca0].[none:budget:qk]</cols>
+      </table>
+      <simple-id uuid='{56DE7EEE-7EA4-41C6-A2B9-531C1B4E7EAE}' />
+    </worksheet>
+    <worksheet name='Director Revenue'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontname='Toppan Bunkyu Midashi Gothic'>Top Directors by Revenue</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='directors' name='federated.0lkej7x1x2f75b14xu4hd157wca0' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Top N' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='5'>
+              <calculation class='tableau' formula='5' />
+              <range max='25' min='1' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0lkej7x1x2f75b14xu4hd157wca0'>
+            <column-instance column='[primaryName]' derivation='None' name='[none:primaryName:nk]' pivot='key' type='nominal' />
+            <column caption='Name' datatype='string' name='[primaryName]' role='dimension' type='nominal' />
+            <column-instance column='[world_gross]' derivation='Sum' name='[sum:world_gross:qk]' pivot='key' type='quantitative' />
+            <column caption='World Gross' datatype='real' name='[world_gross]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0lkej7x1x2f75b14xu4hd157wca0].[none:primaryName:nk]'>
+            <groupfilter count='[Parameters].[Parameter 1]' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([world_gross])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:primaryName:nk]' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-manual-selection-is-empty='true' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.0lkej7x1x2f75b14xu4hd157wca0].[none:primaryName:nk]' direction='DESC' using='[federated.0lkej7x1x2f75b14xu4hd157wca0].[sum:world_gross:qk]' />
+          <slices>
+            <column>[federated.0lkej7x1x2f75b14xu4hd157wca0].[none:primaryName:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0lkej7x1x2f75b14xu4hd157wca0].[sum:world_gross:qk]' palette='green_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.0lkej7x1x2f75b14xu4hd157wca0].[sum:world_gross:qk]' />
+              <color column='[federated.0lkej7x1x2f75b14xu4hd157wca0].[sum:world_gross:qk]' />
+              <text column='[federated.0lkej7x1x2f75b14xu4hd157wca0].[none:primaryName:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{270AA11C-4909-4D57-B60A-1D43D70A173C}' />
+    </worksheet>
+    <worksheet name='Director Revenue By Year'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontname='Toppan Bunkyu Midashi Gothic'>Top Directors by Revenue</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='directors' name='federated.0lkej7x1x2f75b14xu4hd157wca0' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Top N' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='5'>
+              <calculation class='tableau' formula='5' />
+              <range max='25' min='1' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0lkej7x1x2f75b14xu4hd157wca0'>
+            <column-instance column='[primaryName]' derivation='None' name='[none:primaryName:nk]' pivot='key' type='nominal' />
+            <column caption='Name' datatype='string' name='[primaryName]' role='dimension' type='nominal' />
+            <column-instance column='[world_gross]' derivation='Sum' name='[sum:world_gross:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[year]' derivation='Year-Trunc' name='[tyr:year:ok]' pivot='key' type='ordinal' />
+            <column caption='World Gross' datatype='real' name='[world_gross]' role='measure' type='quantitative' />
+            <column caption='Release Year' datatype='date' datatype-customized='true' name='[year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0lkej7x1x2f75b14xu4hd157wca0].[Action (Name)]'>
+            <groupfilter function='level-members' level='[primaryName]' user:ui-action-filter='[Action2_702104D74ED74FFE828093E4EABD6E2B]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0lkej7x1x2f75b14xu4hd157wca0].[none:primaryName:nk]'>
+            <groupfilter count='[Parameters].[Parameter 1]' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([world_gross])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:primaryName:nk]' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-manual-selection-is-empty='true' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.0lkej7x1x2f75b14xu4hd157wca0].[none:primaryName:nk]' direction='ASC' using='[federated.0lkej7x1x2f75b14xu4hd157wca0].[sum:world_gross:qk]' />
+          <slices>
+            <column>[federated.0lkej7x1x2f75b14xu4hd157wca0].[none:primaryName:nk]</column>
+            <column>[federated.0lkej7x1x2f75b14xu4hd157wca0].[Action (Name)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0lkej7x1x2f75b14xu4hd157wca0].[sum:world_gross:qk]' scope='rows' value='' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0lkej7x1x2f75b14xu4hd157wca0].[sum:world_gross:qk]' palette='green_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0lkej7x1x2f75b14xu4hd157wca0].[none:primaryName:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0lkej7x1x2f75b14xu4hd157wca0].[sum:world_gross:qk]</rows>
+        <cols>[federated.0lkej7x1x2f75b14xu4hd157wca0].[tyr:year:ok]</cols>
+      </table>
+      <simple-id uuid='{1DA2180D-AE7D-4118-922F-7102C08E791B}' />
+    </worksheet>
+    <worksheet name='High ROI Films'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='movies_tableau_V3' name='federated.03suze61pv6l6s19rhkcn0dnsme3' />
+          </datasources>
+          <datasource-dependencies datasource='federated.03suze61pv6l6s19rhkcn0dnsme3'>
+            <column caption='ROI' datatype='real' name='[Calculation_4181381157818388481]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='([world_revenue]/[budget])*100' />
+            </column>
+            <column datatype='string' name='[Movie]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_4181381157818388481]' derivation='Attribute' name='[attr:Calculation_4181381157818388481:qk]' pivot='key' type='quantitative' />
+            <column caption='Budget' datatype='real' name='[budget]' role='measure' type='quantitative' />
+            <column-instance column='[Movie]' derivation='None' name='[none:Movie:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_4181381157818388481]' derivation='Sum' name='[sum:Calculation_4181381157818388481:qk]' pivot='key' type='quantitative' />
+            <column caption='World Revenue' datatype='real' name='[world_revenue]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.03suze61pv6l6s19rhkcn0dnsme3].[attr:Calculation_4181381157818388481:qk]' included-values='in-range'>
+            <min>1000.0</min>
+          </filter>
+          <filter class='categorical' column='[federated.03suze61pv6l6s19rhkcn0dnsme3].[none:Movie:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Movie:nk]' />
+              <groupfilter function='member' level='[none:Movie:nk]' member='&quot;Deep Throat&quot;' />
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.03suze61pv6l6s19rhkcn0dnsme3].[none:Movie:nk]' direction='DESC' using='[federated.03suze61pv6l6s19rhkcn0dnsme3].[sum:Calculation_4181381157818388481:qk]' />
+          <slices>
+            <column>[federated.03suze61pv6l6s19rhkcn0dnsme3].[attr:Calculation_4181381157818388481:qk]</column>
+            <column>[federated.03suze61pv6l6s19rhkcn0dnsme3].[none:Movie:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.03suze61pv6l6s19rhkcn0dnsme3].[sum:Calculation_4181381157818388481:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.03suze61pv6l6s19rhkcn0dnsme3].[sum:Calculation_4181381157818388481:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.03suze61pv6l6s19rhkcn0dnsme3].[none:Movie:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{F3010927-C272-4613-8A5A-7BC2D6C44B66}' />
+    </worksheet>
+    <worksheet name='ROI'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='movies_tableau_V3' name='federated.03suze61pv6l6s19rhkcn0dnsme3' />
+          </datasources>
+          <datasource-dependencies datasource='federated.03suze61pv6l6s19rhkcn0dnsme3'>
+            <column caption='ROI' datatype='real' name='[Calculation_4181381157818388481]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='([world_revenue]/[budget])*100' />
+            </column>
+            <column datatype='string' name='[Movie]' role='dimension' type='nominal' />
+            <column caption='Budget' datatype='real' name='[budget]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_4181381157818388481]' derivation='None' name='[none:Calculation_4181381157818388481:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Movie]' derivation='None' name='[none:Movie:nk]' pivot='key' type='nominal' />
+            <column-instance column='[budget]' derivation='None' name='[none:budget:qk]' pivot='key' type='quantitative' />
+            <column caption='World Revenue' datatype='real' name='[world_revenue]' role='measure' type='quantitative' />
+            <column caption='Year' datatype='date' datatype-customized='true' name='[year]' role='dimension' type='quantitative' />
+            <column-instance column='[year]' derivation='Year' name='[yr:year:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.03suze61pv6l6s19rhkcn0dnsme3].[Action (YEAR(Year))]'>
+            <groupfilter function='level-members' level='[yr:year:ok]' user:ui-action-filter='[Action1_4342359091BC4DADBE67C6247429054B]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.03suze61pv6l6s19rhkcn0dnsme3].[Exclusions (Budget,Movie,ROI)]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='crossjoin'>
+                <groupfilter function='level-members' level='[none:budget:qk]' />
+                <groupfilter function='level-members' level='[none:Movie:nk]' />
+                <groupfilter function='level-members' level='[none:Calculation_4181381157818388481:qk]' />
+              </groupfilter>
+              <groupfilter function='reorder-dimensionality'>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[none:Calculation_4181381157818388481:qk]' member='180000.0' />
+                  <groupfilter function='crossjoin'>
+                    <groupfilter function='member' level='[none:Movie:nk]' member='&quot;Deep Throat&quot;' />
+                    <groupfilter function='member' level='[none:budget:qk]' member='25000.0' />
+                  </groupfilter>
+                </groupfilter>
+                <order>
+                  <hierarchy name='[none:budget:qk]' />
+                  <hierarchy name='[none:Movie:nk]' />
+                  <hierarchy name='[none:Calculation_4181381157818388481:qk]' />
+                </order>
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.03suze61pv6l6s19rhkcn0dnsme3].[Exclusions (Budget,Movie,ROI)]</column>
+            <column>[federated.03suze61pv6l6s19rhkcn0dnsme3].[Action (YEAR(Year))]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.03suze61pv6l6s19rhkcn0dnsme3].[none:Calculation_4181381157818388481:qk]' scope='rows' value='ROI (%)' />
+            <format attr='title' class='0' field='[federated.03suze61pv6l6s19rhkcn0dnsme3].[none:budget:qk]' scope='cols' value='Budget' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.03suze61pv6l6s19rhkcn0dnsme3].[none:Movie:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='shape' value=':filled/circle' />
+                <format attr='mark-transparency' value='167' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.03suze61pv6l6s19rhkcn0dnsme3].[none:Calculation_4181381157818388481:qk]</rows>
+        <cols>[federated.03suze61pv6l6s19rhkcn0dnsme3].[none:budget:qk]</cols>
+      </table>
+      <simple-id uuid='{08BF750E-6FDB-42F4-88F5-59F05E484DEF}' />
+    </worksheet>
+    <worksheet name='Rating by Year'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='movies_tableau_V3' name='federated.03suze61pv6l6s19rhkcn0dnsme3' />
+          </datasources>
+          <datasource-dependencies datasource='federated.03suze61pv6l6s19rhkcn0dnsme3'>
+            <column caption='Average Rating' datatype='real' name='[averageRating]' role='measure' type='quantitative' />
+            <column-instance column='[averageRating]' derivation='Avg' name='[avg:averageRating:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[year]' derivation='None' name='[none:year:qk]' pivot='key' type='quantitative' />
+            <column caption='Year' datatype='date' datatype-customized='true' name='[year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.03suze61pv6l6s19rhkcn0dnsme3].[none:year:qk]' included-values='in-range'>
+            <min>#1970-01-01#</min>
+          </filter>
+          <slices>
+            <column>[federated.03suze61pv6l6s19rhkcn0dnsme3].[none:year:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+          </pane>
+        </panes>
+        <rows>[federated.03suze61pv6l6s19rhkcn0dnsme3].[avg:averageRating:qk]</rows>
+        <cols>[federated.03suze61pv6l6s19rhkcn0dnsme3].[none:year:qk]</cols>
+      </table>
+      <simple-id uuid='{43DE7375-055F-413F-B340-373BB8A9A384}' />
+    </worksheet>
+    <worksheet name='Revenue by Year'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontname='Toppan Bunkyu Midashi Gothic'>Movie Industry Snapshot</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='movies_tableau_V3' name='federated.03suze61pv6l6s19rhkcn0dnsme3' />
+          </datasources>
+          <datasource-dependencies datasource='federated.03suze61pv6l6s19rhkcn0dnsme3'>
+            <column caption='Domestic Revenue' datatype='real' name='[domestic_revenue]' role='measure' type='quantitative' />
+            <column-instance column='[year]' derivation='None' name='[none:year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[domestic_revenue]' derivation='Sum' name='[sum:domestic_revenue:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[world_revenue]' derivation='Sum' name='[sum:world_revenue:qk]' pivot='key' type='quantitative' />
+            <column caption='World Revenue' datatype='real' name='[world_revenue]' role='measure' type='quantitative' />
+            <column caption='Year' datatype='date' datatype-customized='true' name='[year]' role='dimension' type='quantitative' />
+            <column-instance column='[year]' derivation='Year' name='[yr:year:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <alphabetic-sort column='[federated.03suze61pv6l6s19rhkcn0dnsme3].[:Measure Names]' direction='DESC' />
+          <filter class='quantitative' column='[federated.03suze61pv6l6s19rhkcn0dnsme3].[none:year:qk]' included-values='in-range'>
+            <min>#1970-01-01#</min>
+          </filter>
+          <slices>
+            <column>[federated.03suze61pv6l6s19rhkcn0dnsme3].[none:year:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.03suze61pv6l6s19rhkcn0dnsme3].[sum:domestic_revenue:qk]' field-type='quantitative' fold='true' scope='rows' synchronized='true' type='space' />
+            <format attr='display' class='0' field='[federated.03suze61pv6l6s19rhkcn0dnsme3].[sum:domestic_revenue:qk]' scope='rows' value='false' />
+            <format attr='title' class='0' field='[federated.03suze61pv6l6s19rhkcn0dnsme3].[sum:world_revenue:qk]' scope='rows' value='' />
+            <format attr='title' class='0' field='[federated.03suze61pv6l6s19rhkcn0dnsme3].[yr:year:ok]' scope='cols' value='' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.03suze61pv6l6s19rhkcn0dnsme3].[:Measure Names]' value=''>
+              <formatted-text />
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.03suze61pv6l6s19rhkcn0dnsme3].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.03suze61pv6l6s19rhkcn0dnsme3].[sum:world_revenue:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.03suze61pv6l6s19rhkcn0dnsme3].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-markers-mode' value='auto' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.03suze61pv6l6s19rhkcn0dnsme3].[sum:domestic_revenue:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.03suze61pv6l6s19rhkcn0dnsme3].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.03suze61pv6l6s19rhkcn0dnsme3].[sum:world_revenue:qk] + [federated.03suze61pv6l6s19rhkcn0dnsme3].[sum:domestic_revenue:qk])</rows>
+        <cols>[federated.03suze61pv6l6s19rhkcn0dnsme3].[yr:year:ok]</cols>
+      </table>
+      <simple-id uuid='{BF288864-0A0B-47CF-8C54-860089D03818}' />
+    </worksheet>
+    <worksheet name='Top 10 Movies per Year'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='movies_tableau_V3' name='federated.03suze61pv6l6s19rhkcn0dnsme3' />
+          </datasources>
+          <datasource-dependencies datasource='federated.03suze61pv6l6s19rhkcn0dnsme3'>
+            <column caption='Rank' datatype='integer' name='[Calculation_4245627821266382848]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='RANK_UNIQUE(SUM([world_revenue]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='string' name='[Movie]' role='dimension' type='nominal' />
+            <column-instance column='[Movie]' derivation='None' name='[none:Movie:nk]' pivot='key' type='nominal' />
+            <column-instance column='[world_revenue]' derivation='Sum' name='[sum:world_revenue:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_4245627821266382848]' derivation='User' name='[usr:Calculation_4245627821266382848:qk:1]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[federated.03suze61pv6l6s19rhkcn0dnsme3].[none:Movie:nk]' ordering-type='Field' />
+            </column-instance>
+            <column caption='World Revenue' datatype='real' name='[world_revenue]' role='measure' type='quantitative' />
+            <column caption='Year' datatype='date' datatype-customized='true' name='[year]' role='dimension' type='quantitative' />
+            <column-instance column='[year]' derivation='Year' name='[yr:year:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.03suze61pv6l6s19rhkcn0dnsme3].[Action (YEAR(Year))]'>
+            <groupfilter function='level-members' level='[yr:year:ok]' user:ui-action-filter='[Action1_4342359091BC4DADBE67C6247429054B]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='quantitative' column='[federated.03suze61pv6l6s19rhkcn0dnsme3].[usr:Calculation_4245627821266382848:qk:1]' included-values='in-range'>
+            <max>10</max>
+          </filter>
+          <filter class='categorical' column='[federated.03suze61pv6l6s19rhkcn0dnsme3].[yr:year:ok]'>
+            <groupfilter function='level-members' level='[yr:year:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.03suze61pv6l6s19rhkcn0dnsme3].[yr:year:ok]</column>
+            <column>[federated.03suze61pv6l6s19rhkcn0dnsme3].[usr:Calculation_4245627821266382848:qk:1]</column>
+            <column>[federated.03suze61pv6l6s19rhkcn0dnsme3].[Action (YEAR(Year))]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.03suze61pv6l6s19rhkcn0dnsme3].[sum:world_revenue:qk]' />
+              <color column='[federated.03suze61pv6l6s19rhkcn0dnsme3].[sum:world_revenue:qk]' />
+              <text column='[federated.03suze61pv6l6s19rhkcn0dnsme3].[none:Movie:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{6CECAE4D-F392-4A5A-A1DA-0E92EFBB961A}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Directors Overview'>
+      <style />
+      <size maxheight='768' maxwidth='1366' minheight='768' minwidth='1366' preset-index='0' sizing-mode='fixed' />
+      <datasources>
+        <datasource name='Parameters' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Top N' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='5'>
+          <calculation class='tableau' formula='5' />
+          <range max='25' min='1' />
+        </column>
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='6' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97916' id='9' param='horz' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='97916' id='7' type-v2='layout-basic' w='87115' x='586' y='1042'>
+              <zone h='48958' id='5' name='Director Revenue' w='43558' x='586' y='1042'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='58463' id='12' name='Director Films' show-title='false' w='43557' x='44144' y='1042'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='48958' id='22' name='Director Revenue By Year' show-title='false' w='43558' x='586' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='39453' id='25' name='Director ROI' show-title='false' w='43557' x='44144' y='59505'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='97916' id='8' is-fixed='true' param='vert' type-v2='layout-flow' w='11713' x='87701' y='1042'>
+              <zone h='8464' id='10' name='Director Revenue' pane-specification-id='0' param='[federated.0lkej7x1x2f75b14xu4hd157wca0].[sum:world_gross:qk]' type-v2='color' w='11713' x='87701' y='1042'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='9766' id='11' mode='slider' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='11713' x='87701' y='9506'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='16407' id='13' name='Director Films' pane-specification-id='0' param='[federated.0lkej7x1x2f75b14xu4hd157wca0].[none:primaryName:nk]' type-v2='color' w='11713' x='87701' y='19272'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='7552' id='26' name='Director ROI' pane-specification-id='0' param='[federated.0lkej7x1x2f75b14xu4hd157wca0].[none:Calculation_4335207232852750338:nk]' show-title='false' type-v2='color' w='10249' x='89751' y='73958' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1450' minheight='1450' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='30' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='29' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+                <zone fixed-size='280' h='48958' id='5' is-fixed='true' name='Director Revenue' w='43558' x='586' y='1042'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='8464' id='10' name='Director Revenue' pane-specification-id='0' param='[federated.0lkej7x1x2f75b14xu4hd157wca0].[sum:world_gross:qk]' type-v2='color' w='11713' x='87701' y='1042'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='58463' id='12' is-fixed='true' name='Director Films' show-title='false' w='43557' x='44144' y='1042'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='16407' id='13' name='Director Films' pane-specification-id='0' param='[federated.0lkej7x1x2f75b14xu4hd157wca0].[none:primaryName:nk]' type-v2='color' w='11713' x='87701' y='19272'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='9766' id='11' mode='slider' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='11713' x='87701' y='9506'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='48958' id='22' is-fixed='true' name='Director Revenue By Year' show-title='false' w='43558' x='586' y='50000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='39453' id='25' is-fixed='true' name='Director ROI' show-title='false' w='43557' x='44144' y='59505'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7552' id='26' name='Director ROI' pane-specification-id='0' param='[federated.0lkej7x1x2f75b14xu4hd157wca0].[none:Calculation_4335207232852750338:nk]' show-title='false' type-v2='color' w='10249' x='89751' y='73958'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{78C5D312-20F3-4822-B590-6FB47568FCA2}' />
+    </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='Movies Overview'>
+      <style />
+      <size maxheight='768' maxwidth='1366' minheight='768' minwidth='1366' preset-index='0' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97916' id='7' param='horz' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='97916' id='5' type-v2='layout-basic' w='98828' x='586' y='1042'>
+              <zone h='48959' id='3' name='Top 10 Movies per Year' show-title='false' w='49414' x='586' y='49999'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='48957' id='10' name='Revenue by Year' w='49414' x='586' y='1042'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='48959' id='13' name='Budget and Revenue' show-title='false' w='49414' x='50000' y='1042'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='48957' id='14' name='ROI' show-title='false' w='49414' x='50000' y='50001'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='5859' id='11' name='Revenue by Year' pane-specification-id='1' param='[federated.03suze61pv6l6s19rhkcn0dnsme3].[:Measure Names]' show-title='false' type-v2='color' w='10249' x='5271' y='28255' />
+        <zone fixed-size='160' h='7813' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='11713' x='87262' y='48438' />
+        <zone h='9896' id='8' name='Top 10 Movies per Year' pane-specification-id='0' param='[federated.03suze61pv6l6s19rhkcn0dnsme3].[sum:world_revenue:qk]' type-v2='color' w='12592' x='85432' y='45182' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1300' minheight='1300' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='61' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='60' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+                <zone fixed-size='280' h='48957' id='10' is-fixed='true' name='Revenue by Year' w='43558' x='586' y='1042'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5859' id='11' name='Revenue by Year' pane-specification-id='1' param='[federated.03suze61pv6l6s19rhkcn0dnsme3].[:Measure Names]' show-title='false' type-v2='color' w='10249' x='5271' y='28255'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='48959' id='13' is-fixed='true' name='Budget and Revenue' show-title='false' w='43557' x='44144' y='1042'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='48959' id='3' is-fixed='true' name='Top 10 Movies per Year' show-title='false' w='43558' x='586' y='49999'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='8464' id='8' name='Top 10 Movies per Year' pane-specification-id='0' param='[federated.03suze61pv6l6s19rhkcn0dnsme3].[sum:world_revenue:qk]' type-v2='color' w='11713' x='87701' y='1042'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='48957' id='14' is-fixed='true' name='ROI' show-title='false' w='43557' x='44144' y='50001'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{2D502C4A-4D7F-4F7A-A602-92F55D9C5FD4}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='51'>
+    <window class='worksheet' name='Revenue by Year'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.03suze61pv6l6s19rhkcn0dnsme3].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{2DE8D5F0-F6EB-4E85-832B-4D2EF8030CC3}' />
+    </window>
+    <window class='worksheet' name='Rating by Year'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{AA6C9FC5-5330-49E5-91A3-B1726D8A8735}' />
+    </window>
+    <window class='worksheet' name='Top 10 Movies per Year'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='slider' param='[federated.03suze61pv6l6s19rhkcn0dnsme3].[yr:year:ok]' type='filter' />
+            <card pane-specification-id='0' param='[federated.03suze61pv6l6s19rhkcn0dnsme3].[sum:world_revenue:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{119360F4-A8A2-4B82-9BC4-1CAFDB2DBC6A}' />
+    </window>
+    <window class='worksheet' name='Budget and Revenue'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{4BB2CCCA-4B07-4109-8EFF-2CF58A1A624B}' />
+    </window>
+    <window class='worksheet' name='ROI'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E829E974-BE58-40FA-9BE4-8E6F1BDC897C}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Movies Overview'>
+      <viewpoints>
+        <viewpoint name='Budget and Revenue'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='ROI'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Revenue by Year'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Top 10 Movies per Year'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='8' />
+      <simple-id uuid='{8CFE3810-D6D1-463A-9AA4-C59026C53B28}' />
+    </window>
+    <window class='worksheet' name='Director Revenue'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0lkej7x1x2f75b14xu4hd157wca0].[sum:world_gross:qk]' type='color' />
+            <card mode='slider' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{355FAEF7-1991-42C7-83FF-D53FA9D06893}' />
+    </window>
+    <window class='worksheet' name='Director Revenue By Year'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='slider' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card pane-specification-id='0' param='[federated.0lkej7x1x2f75b14xu4hd157wca0].[none:primaryName:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{54B013FC-0336-441F-94D5-E969E0069B74}' />
+    </window>
+    <window class='worksheet' name='Director Films'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='slider' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card pane-specification-id='0' param='[federated.0lkej7x1x2f75b14xu4hd157wca0].[none:primaryName:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7DCA99CA-17FD-488D-BFB2-98661F3D8899}' />
+    </window>
+    <window class='worksheet' name='Director ROI'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0lkej7x1x2f75b14xu4hd157wca0].[none:Calculation_4335207232852750338:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{0467332F-6B94-45D9-BBC8-9C038AEAFD1C}' />
+    </window>
+    <window class='dashboard' name='Directors Overview'>
+      <viewpoints>
+        <viewpoint name='Director Films'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Director ROI'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Director Revenue' />
+        <viewpoint name='Director Revenue By Year'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{89AEA843-80EB-420C-8EE0-B185D505C3C4}' />
+    </window>
+    <window class='worksheet' name='High ROI Films'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7383E67F-8114-4307-8AF4-03AC37E2DE57}' />
+    </window>
+  </windows>
+</workbook>
