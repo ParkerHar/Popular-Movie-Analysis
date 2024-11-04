@@ -1,4 +1,4 @@
-# Popular-Movie-Analysis
+# Popular-Movie-Analysis :movie_camera:
 
 ## Overview
 
@@ -46,7 +46,7 @@ If we look at the top genres by revenue, some genres, such as adventure, have mu
 
 <img width="1369" alt="Director Dash" src="https://github.com/user-attachments/assets/3f4b607f-eb25-408d-8040-12cc6d1c3011">
 
-Finally, I wanted to look at the people who play a major role in a films success, which are the directors. This dashboard indicates that there is a relationship between the director and the revenue generate. Films made by only the top 5 directors account for 5.6% of total global revenue while the top 10 directors are responsible for close to 10% of revenue.
+Finally, I wanted to look at the people who play a major role in a films success, which are the directors. This dashboard indicates that there is a relationship between the director and the revenue generated. Films made by only the top 5 directors account for 5.6% of total global revenue while the top 10 directors are responsible for close to 10% of revenue.
 
 When looking at each director we can start to see that there are some, Steven Spielberg for example, who have just directed a ton of movies to reach high revenue numbers. However, there are others like the Russo brothers, who have hit incredible numbers in a relatively few number of movies.
 
