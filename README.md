@@ -1,10 +1,10 @@
 # Popular-Movie-Analysis
 
-**Overview**
+## Overview
 
 The goal of this project is to predict the financial success (world revenue) of a movie based on some information available before, or at, the movie’s release.
 
-**Data**
+## Data
 
 The dataset used in this project was built from IMDB and the numbers.com
 
@@ -14,7 +14,7 @@ Unfortunately, I could not find a free dataset from IMDB that contained revenue 
 
 These datasets were combined using a “fuzzy” match to help mitigate any differences in the movie titles between the two websites.
 
-**Initial Model**
+## Initial Model
 
 Once the data set was cleaned, I moved on to building the model to predict the world revenue of a movie.
 
@@ -26,7 +26,7 @@ A multivariate regression model was run and unfortunately yielded some very aver
 
 <img width="668" alt="Model Outcome" src="https://github.com/user-attachments/assets/d52b43f5-14ce-4b5f-962b-d8177a87ad4f">
 
-**Movie Dashboard**
+## Movie Dashboard
 
 <img width="1359" alt="Movie Dash" src="https://github.com/user-attachments/assets/55ba554a-0925-4626-9749-6f8f4af1dae3">
 
@@ -34,7 +34,7 @@ Taking a look at the movie industry as a whole we can start to see some relation
 
 Another interesting relationship is between return on investment and budget. This is something I would like to further review as these low budget/high revenue movies may be outliers in the data set, but they may also provide insight on factors that impact revenue beyond the budget.
 
-**Genre Dashboard**
+## Genre Dashboard
 
 <img width="1370" alt="Genre Dash" src="https://github.com/user-attachments/assets/1909eddd-b1fe-4ff3-bad5-f22346085bc8">
 
@@ -42,7 +42,7 @@ I wanted to look at the impact the film’s genre has on revenue. The word cloud
 
 If we look at the top genres by revenue, some genres, such as adventure, have much higher average world revenues than others. This may indicate that Adventure movies are more likely to be financially successful, or at least are more likely to achieve high revenue numbers
 
-**Director Dashboard**
+## Director Dashboard
 
 <img width="1369" alt="Director Dash" src="https://github.com/user-attachments/assets/3f4b607f-eb25-408d-8040-12cc6d1c3011">
 
@@ -50,7 +50,7 @@ Finally, I wanted to look at the people who play a major role in a films success
 
 When looking at each director we can start to see that there are some, Steven Spielberg for example, who have just directed a ton of movies to reach high revenue numbers. However, there are others like the Russo brothers, who have hit incredible numbers in a relatively few number of movies.
 
-**Next Steps**
+## Next Steps
 
 As with most data projects, I would like to gather more data in general. Not just more movies, but more information per movie as well. Factors like the impact of a production studio or marketing budget on a film’s success may be interesting to examine.
 
