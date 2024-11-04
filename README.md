@@ -1,10 +1,10 @@
 # Popular-Movie-Analysis :movie_camera:
 
-## Overview
+## Overview :eyes:
 
 The goal of this project is to predict the financial success (world revenue) of a movie based on some information available before, or at, the movie’s release.
 
-## Data
+## Data  :chart_with_upwards_trend:
 
 The dataset used in this project was built from IMDB and the numbers.com
 
@@ -14,7 +14,7 @@ Unfortunately, I could not find a free dataset from IMDB that contained revenue 
 
 These datasets were combined using a “fuzzy” match to help mitigate any differences in the movie titles between the two websites.
 
-## Initial Model
+## Initial Model  :construction:
 
 Once the data set was cleaned, I moved on to building the model to predict the world revenue of a movie.
 
@@ -50,7 +50,7 @@ Finally, I wanted to look at the people who play a major role in a films success
 
 When looking at each director we can start to see that there are some, Steven Spielberg for example, who have just directed a ton of movies to reach high revenue numbers. However, there are others like the Russo brothers, who have hit incredible numbers in a relatively few number of movies.
 
-## Next Steps
+## Next Steps :pencil:
 
 As with most data projects, I would like to gather more data in general. Not just more movies, but more information per movie as well. Factors like the impact of a production studio or marketing budget on a film’s success may be interesting to examine.
 
