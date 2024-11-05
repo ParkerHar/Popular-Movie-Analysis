@@ -6,11 +6,9 @@ The goal of this project is to predict the financial success (world revenue) of 
 
 ## Data  :chart_with_upwards_trend:
 
-The dataset used in this project was built from IMDB and the numbers.com
+The data used in this project was built from IMDB and the-numbers.
 
-The resulting dataset from IMDB included a wide variety of information such as title, director, average rating, genre and  runtime.
-
-Unfortunately, I could not find a free dataset from IMDB that contained revenue and budget information. This is where the-numbers website came in handy. This website is updated daily with financial information on ~6500 of the biggest movies in the past 100 years. 
+The resulting dataset contains a bunch of information about movies including the director, genre, rating, and revenue.
 
 These datasets were combined using a “fuzzy” match to help mitigate any differences in the movie titles between the two websites.
 
@@ -18,17 +16,17 @@ These datasets were combined using a “fuzzy” match to help mitigate any diff
 
 Once the data set was cleaned, I moved on to building the model to predict the world revenue of a movie.
 
-After playing around with some feature selection I ended up with a few independent variables that will attempt to predict our dependant variable, world revenue.
+This was built around 4 predictor variables: Budget, Run Time, Average Rating, and number of Votes received.
 
-These variables were Budget, Run Time, Average Rating, and number of Votes received.
-
-A multivariate regression model was run and unfortunately yielded some very average performance. This model can only accurately predict the world revenue of a movie around 61% of the time. While a little bit disappointing, this helped me realize that there may be some relationships in my data set that I was missing. So I added the data to Tableau and started to build out some dashboards.
+A multivariate model was run and unfortunately yielded some very average performance. This model can only accurately predict the world revenue of a movie around 60% confidence. Compared to similar project online this is a below average score as other models are performing at around 75%
 
 <img width="668" alt="Model Outcome" src="https://github.com/user-attachments/assets/d52b43f5-14ce-4b5f-962b-d8177a87ad4f">
 
+However, this performance inspired me to dig deeper into my dataset to uncover some more relationships and potential features to use in future models.
+
 ## Movie Dashboard
 
-<img width="1359" alt="Movie Dash" src="https://github.com/user-attachments/assets/55ba554a-0925-4626-9749-6f8f4af1dae3">
+<img width="1363" alt="Movie Dash" src="https://github.com/user-attachments/assets/b3a8432f-9607-4895-b65e-93b91a91cbd2">
 
 Taking a look at the movie industry as a whole we can start to see some relationships forming. As previously thought, there is a positive relationship between budget and revenue. However, this relationship is not as strong as initially anticipated.
 
@@ -36,7 +34,7 @@ Another interesting relationship is between return on investment and budget. Thi
 
 ## Genre Dashboard
 
-<img width="1370" alt="Genre Dash" src="https://github.com/user-attachments/assets/1909eddd-b1fe-4ff3-bad5-f22346085bc8">
+<img width="1367" alt="Genre Dash" src="https://github.com/user-attachments/assets/d6789281-d45f-4fc0-8351-5b835706f340">
 
 I wanted to look at the impact the film’s genre has on revenue. The word cloud represents the number of films per genre, while the tree map represents the world revenue per genre. We can see Drama has the highest number of films, however, in the treemap, we see that it does not generate the highest amount of revenue.
 
@@ -44,7 +42,7 @@ If we look at the top genres by revenue, some genres, such as adventure, have mu
 
 ## Director Dashboard
 
-<img width="1369" alt="Director Dash" src="https://github.com/user-attachments/assets/3f4b607f-eb25-408d-8040-12cc6d1c3011">
+<img width="1359" alt="Director Dash" src="https://github.com/user-attachments/assets/4e9115be-9b0a-446a-921a-4b9135b1d970">
 
 Finally, I wanted to look at the people who play a major role in a films success, which are the directors. This dashboard indicates that there is a relationship between the director and the revenue generated. Films made by only the top 5 directors account for 5.6% of total global revenue while the top 10 directors are responsible for close to 10% of revenue.
 
@@ -52,9 +50,11 @@ When looking at each director we can start to see that there are some, Steven Sp
 
 ## Next Steps :pencil:
 
-As with most data projects, I would like to gather more data in general. Not just more movies, but more information per movie as well. Factors like the impact of a production studio or marketing budget on a film’s success may be interesting to examine.
-
 With these newly gained insights I would like to continue building out features to use in my model. As seen in the dashboards, Genre and the director do impact a film’s success. Potentially using the average revenue generated per genre or per director could help improve the accuracy of my model and is something that I am excited to explore.
+
+A linear regression model was used in this project. While user friendly, there are more robust model out there and I plant to implement more advanced machine learning techniques to help improve the model’s accuracy
+
+As with most data projects, I would like to gather more data in general. Not just more movies, but more information per movie as well. Factors like the impact of a production studio or marketing budget on a film’s success may be interesting to examine.
 
 
 
