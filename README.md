@@ -42,7 +42,7 @@ I then wanted to look at the impact between genre and revenue.
 
 There are some genres that dominate in terms of revenue per film, such as sci-fi and adventure. However there are also some interesting comparisons in the 'low revenue' cluster. Some genres are more expensive to make and achieve similar financial numbers as ‘cheaper’ genres. 
 
-The difference between History and Horror is fairly striking. Horror movies cost around $12M less to make and produce and produce $8M dollars more revenue than the average History movie. This shows that a horror movie may potentially be a safer investment than a History film.
+The difference between History and Horror is fairly striking. Horror movies cost around $12M less to make and produce $8M dollars more revenue than the average History movie. This shows that a horror movie may potentially be a safer investment than a History film.
 
 ## Director Dashboard
 
