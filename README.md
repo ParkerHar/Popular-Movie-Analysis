@@ -24,7 +24,9 @@ A multivariate model was run and unfortunately yielded some very average perform
 
 <img width="668" alt="Model Outcome" src="https://github.com/user-attachments/assets/d52b43f5-14ce-4b5f-962b-d8177a87ad4f">
 
-However, this performance inspired me to dig deeper into my dataset to uncover some more relationships and potential features to use in future models.
+However, this performance inspired me to dig deeper into my dataset to uncover some more relationships and potential features to use in future models. The following dashboard are publically available at:
+
+[Tableau Movie Dashboards](https://public.tableau.com/shared/PFNFRTPGX?:display_count=n&:origin=viz_share_link)
 
 ## Movie Dashboard
 
