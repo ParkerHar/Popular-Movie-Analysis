@@ -4,6 +4,8 @@
 
 The goal of this project is to predict the financial success (world revenue) of a movie based on some information available before, or at, the movie’s release.
 
+Being able to predict the success of a film has the potential to help us gain a deeper understanding of the film industry, and in more real terms, could help stakeholders feel more confident investing money into certain projects.
+
 ## Data  :chart_with_upwards_trend:
 
 The data used in this project was built from IMDB and the-numbers.
