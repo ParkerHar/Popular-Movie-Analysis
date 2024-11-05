@@ -16,11 +16,11 @@ These datasets were combined using a “fuzzy” match to help mitigate any diff
 
 ## Initial Model  :construction:
 
-Once the data set was cleaned, I moved on to building the model to predict the world revenue of a movie.
+Once the data set was cleaned, I moved on to building the model to predict world revenue
 
 This was built around 4 predictor variables: Budget, Run Time, Average Rating, and number of Votes received.
 
-A multivariate model was run and unfortunately yielded some very average performance. This model can only accurately predict the world revenue of a movie around 60% confidence. Compared to similar project online this is a below average score as other models are performing at around 75%
+A multivariate model was run and unfortunately yielded some very average performance. This model can only accurately predict the world revenue of a movie around 60% confidence. Compared to similar projects, this is a below average score as other models are performing at around 75%
 
 <img width="668" alt="Model Outcome" src="https://github.com/user-attachments/assets/d52b43f5-14ce-4b5f-962b-d8177a87ad4f">
 
@@ -38,15 +38,17 @@ Another interesting relationship is between return on investment and budget. Thi
 
 <img width="1367" alt="Genre Dash" src="https://github.com/user-attachments/assets/d6789281-d45f-4fc0-8351-5b835706f340">
 
-I wanted to look at the impact the film’s genre has on revenue. The word cloud represents the number of films per genre, while the tree map represents the world revenue per genre. We can see Drama has the highest number of films, however, in the treemap, we see that it does not generate the highest amount of revenue.
+I then wanted to look at the impact between genre and revenue. 
 
-If we look at the top genres by revenue, some genres, such as adventure, have much higher average world revenues than others. This may indicate that Adventure movies are more likely to be financially successful, or at least are more likely to achieve high revenue numbers
+There are some genres that dominate in terms of revenue per film, such as sci-fi and adventure. However there are also some interesting comparisons in the 'low revenue' cluster. Some genres are more expensive to make and achieve similar financial numbers as ‘cheaper’ genres. 
+
+The difference between History and Horror is fairly striking. Horror movies cost around $12M less to make and produce and produce $8M dollars more revenue than the average History movie. This shows that a horror movie may potentially be a safer investment than a History film.
 
 ## Director Dashboard
 
 <img width="1359" alt="Director Dash" src="https://github.com/user-attachments/assets/4e9115be-9b0a-446a-921a-4b9135b1d970">
 
-Finally, I wanted to look at the people who play a major role in a films success, which are the directors. This dashboard indicates that there is a relationship between the director and the revenue generated. Films made by only the top 5 directors account for 5.6% of total global revenue while the top 10 directors are responsible for close to 10% of revenue.
+Finally, I wanted to look at the people who play a major role in a films success, which are the directors. This dashboard indicates that there is a relationship between the director and the revenue generated. Films made by only the top 5 directors account for 5.6% of all total revenue.
 
 When looking at each director we can start to see that there are some, Steven Spielberg for example, who have just directed a ton of movies to reach high revenue numbers. However, there are others like the Russo brothers, who have hit incredible numbers in a relatively few number of movies.
 
