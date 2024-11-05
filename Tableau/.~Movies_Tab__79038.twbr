@@ -4555,8 +4555,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='52' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='84000' id='51' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
+            <zone h='100000' id='54' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='53' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
                 <zone fixed-size='280' h='97916' id='5' is-fixed='true' is-scaled='1' param='Image/Screenshot 2024-11-04 at 9.45.09 AM.png' type-v2='bitmap' w='98828' x='586' y='1042'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -4682,8 +4682,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1100' minheight='1100' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='184' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97916' id='183' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='100000' id='186' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='185' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
                 <zone fixed-size='280' h='48958' id='5' is-fixed='true' name='Director Revenue' show-title='false' w='43558' x='586' y='1042'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -4854,8 +4854,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1400' minheight='1400' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='148' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97916' id='147' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='100000' id='150' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='149' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
                 <zone h='6641' id='92' name='Genres Revenue Share' param='[federated.144qlsb1ifa6le17og79e0dspc3d].[usr:Calculation_4944670926659219459:qk]' show-title='false' type-v2='filter' values='database' w='9224' x='90190' y='11850'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -4963,8 +4963,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='52' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='84000' id='51' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
+            <zone h='100000' id='54' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='53' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
                 <zone fixed-size='280' h='97916' id='5' is-fixed='true' param='Image/Final Project.png' type-v2='bitmap' w='98828' x='586' y='1042'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -5012,8 +5012,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='52' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97916' id='51' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='100000' id='54' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='53' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
                 <zone fixed-size='280' h='97916' id='5' is-fixed='true' is-scaled='1' param='Image/Screenshot 2024-11-04 at 5.33.37 PM.png' type-v2='bitmap' w='98828' x='586' y='1042'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -5083,7 +5083,7 @@
               </zone>
             </zone>
             <zone fixed-size='121' h='97916' id='74' is-fixed='true' param='vert' type-v2='layout-flow' w='8858' x='90556' y='1042'>
-              <zone h='2865' id='76' name='Top 10 Movies per Year' pane-specification-id='0' param='[federated.03suze61pv6l6s19rhkcn0dnsme3].[sum:world_revenue:qk]' type-v2='color' w='8858' x='90556' y='1042'>
+              <zone h='8724' id='76' name='Top 10 Movies per Year' pane-specification-id='0' param='[federated.03suze61pv6l6s19rhkcn0dnsme3].[sum:world_revenue:qk]' type-v2='color' w='8858' x='90556' y='1042'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -5091,7 +5091,7 @@
                   <format attr='margin' value='4' />
                 </zone-style>
               </zone>
-              <zone fixed-size='198' h='26823' id='148' is-fixed='true' type-v2='empty' w='8858' x='90556' y='3907'>
+              <zone fixed-size='198' h='26823' id='148' is-fixed='true' type-v2='empty' w='8858' x='90556' y='9766'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -5099,7 +5099,7 @@
                   <format attr='margin' value='4' />
                 </zone-style>
               </zone>
-              <zone fixed-size='99' h='13933' id='145' is-fixed='true' name='Movie Revenue Contribution' w='8858' x='90556' y='30730'>
+              <zone fixed-size='99' h='13933' id='145' is-fixed='true' name='Movie Revenue Contribution' w='8858' x='90556' y='36589'>
                 <layout-cache cell-count-w='1' type-h='fixed' type-w='cell' />
                 <zone-style>
                   <format attr='border-color' value='#000000' />
@@ -5123,8 +5123,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1400' minheight='1400' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='220' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='84000' id='219' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
+            <zone h='100000' id='222' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='221' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
                 <zone fixed-size='280' h='48958' id='10' is-fixed='true' name='Revenue by Year' show-title='false' w='44984' x='586' y='1042'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -5227,8 +5227,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='43' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97916' id='42' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='100000' id='45' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='44' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
                 <zone fixed-size='280' h='97916' id='3' is-fixed='true' is-scaled='1' param='Image/Screenshot 2024-11-04 at 5.34.48 PM.png' type-v2='bitmap' w='98828' x='586' y='1042'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -5314,8 +5314,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='43' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97916' id='42' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='100000' id='45' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='44' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
                 <zone fixed-size='280' h='97916' id='3' is-fixed='true' is-scaled='1' param='Image/Screenshot 2024-11-04 at 5.35.25 PM.png' type-v2='bitmap' w='98828' x='586' y='1042'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -5339,7 +5339,7 @@
       <simple-id uuid='{372A8E76-A2A0-4BAA-8BB1-BE91853102F3}' />
     </dashboard>
   </dashboards>
-  <windows pres-mode='true' source-height='72'>
+  <windows pres-mode='true' show-side-pane='false' source-height='72'>
     <window class='worksheet' name='Rating by Year'>
       <cards>
         <edge name='left'>
@@ -5417,7 +5417,7 @@
       </cards>
       <simple-id uuid='{74F3A324-3317-4F5D-96B7-BC6D5131D725}' />
     </window>
-    <window class='dashboard' maximized='true' name='Movies Overview'>
+    <window class='dashboard' name='Movies Overview'>
       <viewpoints>
         <viewpoint name='Budget and Revenue'>
           <zoom type='entire-view' />
@@ -5557,7 +5557,7 @@
       <active id='-1' />
       <simple-id uuid='{033F230A-E5A1-4CC6-A246-B0D8C8D33B1B}' />
     </window>
-    <window class='dashboard' name='Presentation'>
+    <window class='dashboard' maximized='true' name='Presentation'>
       <viewpoints />
       <active id='-1' />
       <simple-id uuid='{A8E46FBC-2668-42BF-94EB-06938D990874}' />
