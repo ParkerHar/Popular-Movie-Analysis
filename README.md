@@ -58,7 +58,7 @@ When looking at each director we can start to see that there are some, Steven Sp
 
 With these newly gained insights I would like to continue building out features to use in my model. As seen in the dashboards, Genre and the director do impact a film’s success. Potentially using the average revenue generated per genre or per director could help improve the accuracy of my model and is something that I am excited to explore.
 
-A linear regression model was used in this project. While user friendly, there are more robust model out there and I plant to implement more advanced machine learning techniques to help improve the model’s accuracy
+A linear regression model was used in this project. While user friendly, there are more robust model out there and I plan to implement more advanced machine learning techniques to help improve the model’s accuracy
 
 As with most data projects, I would like to gather more data in general. Not just more movies, but more information per movie as well. Factors like the impact of a production studio or marketing budget on a film’s success may be interesting to examine.
 
