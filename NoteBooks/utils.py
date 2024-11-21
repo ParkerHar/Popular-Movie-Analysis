@@ -1,3 +1,9 @@
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+import statsmodels.api as sm
+from sklearn.preprocessing import StandardScaler
+
 #unscaled linear model
 def linear_model(df,dependant,features):
     y = df[dependant]
