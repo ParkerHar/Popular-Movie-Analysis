@@ -14,6 +14,5 @@ def linear_model(df,dependant,features):
     X = df[features]
     X = sm.add_constant(X) 
 
-    model = sm.OLS(y, X) 
-    results = model.fit()
-    return results
+    model = sm.OLS(y, X).fit()
+    return model
