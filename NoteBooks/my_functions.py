@@ -1,4 +1,3 @@
-import pandas as pd
 import statsmodels.api as sm
 
 def linear_model(df,dependant,features):
@@ -17,4 +16,4 @@ def linear_model(df,dependant,features):
 
     model = sm.OLS(y, X) 
     results = model.fit()
-    print(results.summary())
+    return results
